@@ -1,3 +1,5 @@
+> **Moved (23 October 2026).** This repository now lives in [`openIE-dev/rce`](https://github.com/openIE-dev/rce) as [`ide/`](https://github.com/openIE-dev/rce/tree/main/ide), with its full history, so that it is checked from the same commit as the specification and the reference checker and can no longer drift from them. Changes go there; this repository is kept only as a pointer.
+
 # rce-ide: the RCE IDE agent layer (steps 1 to 3)
 
 Rust only, toolchain 1.98.1. The checker, language server and receipt and energy crates make no model call and no network call. Three crates can: `mei-agent` has HTTP clients for System-One and OpenAI-compatible chat endpoints, `rce-mcp` has a loopback HTTP transport, and `ide-sandbox` has a network proxy behind permission prompts. `acp-client` runs outside coding agents under a jail. Whether any model is called depends on what the user configures, and every proposal still goes through `rce check` before it is accepted.
